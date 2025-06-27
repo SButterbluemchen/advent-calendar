@@ -12,9 +12,15 @@
   "dependencies": {
     "@nuxt/eslint": "^1.4.1",
     "@nuxtjs/i18n": "^9.5.6",
+    "@primeuix/themes": "^1.1.2",
+    "@primevue/forms": "^4.3.5",
     "eslint": "^9.29.0",
     "nuxt": "^3.17.5",
+    "primevue": "^4.3.5",
     "vue": "^3.5.17",
     "vue-router": "^4.5.1"
+  },
+  "devDependencies": {
+    "@primevue/nuxt-module": "^4.3.5"
   }
 }
