@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 import tailwindcss from '@tailwindcss/vite'
-import { MyPreset } from './app.preset'
+import { getCustomizedPreset } from './app.preset'
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
@@ -19,7 +19,7 @@ export default defineNuxtConfig({
       ripple: true,
       inputVariant: 'filled',
       theme: {
-        preset: MyPreset,
+        preset: getCustomizedPreset(2025),
       },
     },
   },
