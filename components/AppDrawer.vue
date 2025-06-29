@@ -33,10 +33,15 @@ const visible = ref(false)
                 <li>
                   <ul class="list-none p-0 m-0 overflow-hidden">
                     <li>
-                      <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                      <router-link
+                        v-ripple
+                        to="/"
+                        class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                        @click="closeCallback"
+                      >
                         <i class="pi pi-home mr-2" />
                         <span class="font-medium">{{ $t('home') }}</span>
-                      </a>
+                      </router-link>
                     </li>
                     <li>
                       <a
@@ -48,7 +53,7 @@ const visible = ref(false)
                           leaveToClass: 'hidden',
                           leaveActiveClass: 'animate-slideup',
                         }"
-                        class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
+                        class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple"
                       >
                         <i class="pi pi-calendar mr-2" />
                         <span class="font-medium">{{ $t('calendars') }}</span>
@@ -56,13 +61,13 @@ const visible = ref(false)
                       </a>
                       <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
                         <li>
-                          <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                          <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                             <i class="pi pi-calendar mr-2" />
                             <span class="font-medium">2025</span>
                           </a>
                         </li>
                         <li>
-                          <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                          <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                             <i class="pi pi-calendar mr-2" />
                             <span class="font-medium">2024</span>
                           </a>
@@ -70,20 +75,20 @@ const visible = ref(false)
                       </ul>
                     </li>
                     <li>
-                      <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                      <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                         <i class="pi pi-users mr-2" />
                         <span class="font-medium">{{ $t('team') }}</span>
                       </a>
                     </li>
                     <li>
-                      <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                      <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                         <i class="pi pi-comments mr-2" />
                         <span class="font-medium">{{ $t('messages') }}</span>
                         <span class="inline-flex items-center justify-center ml-auto bg-primary text-primary-contrast rounded-full" style="min-width: 1.5rem; height: 1.5rem">3</span>
                       </a>
                     </li>
                     <li>
-                      <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                      <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                         <i class="pi pi-cog mr-2" />
                         <span class="font-medium">{{ $t('settings') }}</span>
                       </a>
@@ -93,8 +98,8 @@ const visible = ref(false)
               </ul>
             </div>
             <div class="mt-auto">
-              <hr class="mb-4 mx-4 border-t border-0 border-surface-200 dark:border-surface-700">
-              <a v-ripple class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-700 hover:bg-surface-100 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+              <hr class="mb-4 mx-4 border-t border-0 border-surface-0 dark:border-surface-700">
+              <a v-ripple class="m-4 flex items-center cursor-pointer p-4 gap-2 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
                 <Avatar image="https://primefaces.org/cdn/primevue/images/avatar/amyelsner.png" shape="circle" />
                 <span class="font-bold">Amy Elsner</span>
               </a>
@@ -102,7 +107,7 @@ const visible = ref(false)
           </div>
         </template>
       </Drawer>
-      <Button icon="pi pi-bars" variant="outlined" class="m-2" @click="visible = true" />
+      <Button v-if="!visible" icon="pi pi-bars" variant="outlined" class="m-2" @click="visible = true" />
     </div>
   </template>
 </template>
