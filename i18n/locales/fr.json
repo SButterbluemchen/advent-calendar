@@ -1,5 +1,6 @@
 {
   "welcome": "Bonjour",
+  "adventCalendar": "Calendrier de l'Avent",
   "calendar": {
     "countdown": {
       "days": "Jours",
@@ -7,8 +8,9 @@
       "hours": "Heures",
       "minutes": "Minutes",
       "seconds": "Secondes",
-      "title": "restants avant l'activation du calendrier de l'Avent",
+      "title": "Ton calendrier est disponible dans ...",
       "pageTitle": "Countdown de l'Avent"
     }
-  }
+  },
+  "loading": "Chargement en cours..."
 }

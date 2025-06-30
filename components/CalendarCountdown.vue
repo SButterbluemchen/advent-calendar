@@ -14,27 +14,32 @@ const targetDateFromCalendar = computed(() =>
     : null,
 )
 const targetDate = ref(targetDateFromCalendar.value ? targetDateFromCalendar : targetDateCurrentYear.value)
-const countdown: labelValue = ref([])
+const countdown = ref<labelValue[]>([])
 
 let timer: number
 
 function updateCountdown() {
   const now = new Date().getTime()
-  const distance = targetDate.value.getTime() - now
+  if (targetDate.value) {
+    const distance = targetDate.value.getTime() - now
 
-  if (distance <= 0) {
-    emit('countdownIsFinished')
-    countdown.value = []
-    clearInterval(timer)
-    return
+    if (distance <= 0) {
+      emit('countdownIsFinished')
+      countdown.value = []
+      clearInterval(timer)
+      return
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+    const hours = Math.floor((distance / (1000 * 60 * 60)) % 24)
+    const minutes = Math.floor((distance / (1000 * 60)) % 60)
+    const seconds = Math.floor((distance / 1000) % 60)
+
+    countdown.value = [{ value: days, label: 'days' }, { value: hours, label: 'hours' }, {
+      value: minutes,
+      label: 'minutes',
+    }, { value: seconds, label: 'seconds' }]
   }
-
-  const days = Math.floor(distance / (1000 * 60 * 60 * 24))
-  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24)
-  const minutes = Math.floor((distance / (1000 * 60)) % 60)
-  const seconds = Math.floor((distance / 1000) % 60)
-
-  countdown.value = [{ value: days, label: 'days' }, { value: hours, label: 'hours' }, { value: minutes, label: 'minutes' }, { value: seconds, label: 'seconds' }]
 }
 
 onMounted(() => {
@@ -48,19 +53,19 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 md:gap-4 items-center">
-    <div class="flex flex-col md:flex-row">
-      <p v-for="{ value, label } in countdown" :key="label" class="m-1 md:m-3 p-4 min-w-20 md:min-w-30 lg:min-w-40 bg-black/40 rounded-lg flex flex-col gap-1 items-center">
-        <span class="text-5xl md:text-6xl lg:text-8xl">{{ value }}</span>
-        <span class="text-sm md:text-lg lg:text-xl">{{ $t(`calendar.countdown.${label}`) }}</span>
-      </p>
-    </div>
+  <div class="flex flex-col gap-2 md:gap-4 md:-mt-20 items-center">
     <p v-if="countdown.length > 0" class="text-xl md:text-2xl lg:text-3xl text-center">
       {{ $t('calendar.countdown.title') }}
     </p>
     <p v-else class="text-xl md:text-2xl lg:text-3xl text-center">
       {{ $t('calendar.countdown.finished') }}
     </p>
+    <div class="flex flex-col md:flex-row">
+      <p v-for="{ value, label } in countdown" :key="label" class="m-1 md:m-3 p-4 min-w-20 md:min-w-30 lg:min-w-40 bg-black/40 rounded-lg flex flex-col gap-1 items-center">
+        <span class="text-5xl md:text-6xl lg:text-8xl">{{ value }}</span>
+        <span class="text-sm md:text-lg lg:text-xl">{{ $t(`calendar.countdown.${label}`) }}</span>
+      </p>
+    </div>
   </div>
 </template>
 

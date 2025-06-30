@@ -1,5 +1,6 @@
 {
   "welcome": "Welcome",
+  "adventCalendar": "Advent Calendar",
   "calendar": {
     "countdown": {
       "days": "Days",
@@ -7,8 +8,9 @@
       "hours": "Hours",
       "minutes": "Minutes",
       "seconds": "Seconds",
-      "title": "left until activation of the Advent Calendar",
-      "pageTitle": "Advent Countdown",
+      "title": "Your Calendar is available in ...",
+      "pageTitle": "Advent Countdown"
     }
-  }
+  },
+  "loading": "Loading..."
 }
