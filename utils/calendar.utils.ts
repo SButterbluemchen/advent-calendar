@@ -1,13 +1,14 @@
 import type { CalendarVariables } from '~/models/calendar.interfaces'
+import { computed } from 'vue'
 
 export const calendarVariables: CalendarVariables = {
   2025: {
     backgroundUrl: '/2025_background.jpg',
-    primaryColor: 'cyan',
+    primaryColor: 'red',
   },
   2024: {
-    backgroundUrl: '/2025_background.jpg',
-    primaryColor: 'red',
+    backgroundUrl: '/2024_background.jpg',
+    primaryColor: 'sky',
   },
 }
 

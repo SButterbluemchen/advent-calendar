@@ -3,9 +3,15 @@ import { usePreset } from '@primeuix/themes'
 import { getCustomizedPreset } from '~/app.preset'
 import { calendarVariables } from '~/utils/calendar.utils'
 
-const currentYear = computed(() => new Date().getFullYear())
+const route = useRoute()
+const yearFromUrl = computed(() => Number(route.params.year))
+
+// Named slots are not supported in the default layout
+const title = computed(() => route.meta.title || '')
+useHead({ title: title.value })
+
 const backgroundImage = computed(() => {
-  const url = calendarVariables[currentYear.value]?.backgroundUrl || ''
+  const url = calendarVariables[yearFromUrl.value]?.backgroundUrl || ''
   return url ? `url(${url})` : ''
 })
 
@@ -15,12 +21,9 @@ const style = computed(() => ({
   backgroundPosition: 'center',
 }))
 
-usePreset(getCustomizedPreset(currentYear.value))
-
-// Named slots are not supported in the default layout
-const route = useRoute()
-const title = computed(() => route.meta.title || '')
-useHead({ title: title.value })
+watch(() => yearFromUrl.value, () => {
+  usePreset(getCustomizedPreset(yearFromUrl.value))
+}, { immediate: true })
 </script>
 
 <template>

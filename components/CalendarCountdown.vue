@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Timeout } from 'unenv/node/internal/timers/timeout'
 import type { labelValue } from '~/models/general.interfaces'
 import { onMounted, onUnmounted, ref } from 'vue'
 import { calendarYears } from '~/utils/calendar.utils'
@@ -16,7 +17,7 @@ const targetDateFromCalendar = computed(() =>
 const targetDate = ref(targetDateFromCalendar.value ? targetDateFromCalendar : targetDateCurrentYear.value)
 const countdown = ref<labelValue[]>([])
 
-let timer: number
+let timer: number | Timeout<any>
 
 function updateCountdown() {
   const now = new Date().getTime()

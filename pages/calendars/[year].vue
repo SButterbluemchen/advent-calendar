@@ -6,10 +6,15 @@ definePageMeta({
   title: 'adventCalendar',
 })
 
+const route = useRoute()
+const yearFromUrl = computed<number>(() => Number(route.params.year))
+
 const now = ref<Date>()
 const eventDate = new Date(new Date().getFullYear(), 11, 1)
+const isOldCalendar = computed(() => yearFromUrl.value < Number(now.value?.getFullYear()))
+
 const loading = ref(true)
-const showCalendar = ref(false)
+const showCalendar = ref(isOldCalendar)
 
 const isCalendar = computed(() => now.value && now.value >= eventDate)
 
