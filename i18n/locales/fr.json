@@ -1,3 +1,14 @@
 {
-  "welcome": "Bonjour"
+  "welcome": "Bonjour",
+  "calendar": {
+    "countdown": {
+      "days": "Jours",
+      "finished": "Ton calendrier de l'Avent est prêt !",
+      "hours": "Heures",
+      "minutes": "Minutes",
+      "seconds": "Secondes",
+      "title": "restants avant l'activation du calendrier de l'Avent",
+      "pageTitle": "Countdown de l'Avent"
+    }
+  }
 }

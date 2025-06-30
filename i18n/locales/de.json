@@ -1,3 +1,14 @@
 {
-  "welcome": "Willkommen"
+  "welcome": "Willkommen",
+  "calendar": {
+    "countdown": {
+      "days": "Tage",
+      "finished": "Dein Adventskalender steht bereit!",
+      "hours": "Stunden",
+      "minutes": "Minuten",
+      "seconds": "Sekunden",
+      "title": "bis zur Aktivierung des Adventskalenders",
+      "pageTitle": "Advent Countdown",
+    }
+  }
 }

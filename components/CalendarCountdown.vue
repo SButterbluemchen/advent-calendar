@@ -1,0 +1,68 @@
+<script setup lang="ts">
+import type { labelValue } from '~/models/general.interfaces'
+import { onMounted, onUnmounted, ref } from 'vue'
+import { calendarYears } from '~/utils/calendar.utils'
+
+const emit = defineEmits<{
+  (event: 'countdownIsFinished'): void
+}>()
+
+const targetDateCurrentYear = computed(() => new Date(new Date().getFullYear(), 11, 1))
+const targetDateFromCalendar = computed(() =>
+  calendarYears.value && calendarYears.value.length > 0
+    ? new Date(calendarYears.value[0], 11, 1)
+    : null,
+)
+const targetDate = ref(targetDateFromCalendar.value ? targetDateFromCalendar : targetDateCurrentYear.value)
+const countdown: labelValue = ref([])
+
+let timer: number
+
+function updateCountdown() {
+  const now = new Date().getTime()
+  const distance = targetDate.value.getTime() - now
+
+  if (distance <= 0) {
+    emit('countdownIsFinished')
+    countdown.value = []
+    clearInterval(timer)
+    return
+  }
+
+  const days = Math.floor(distance / (1000 * 60 * 60 * 24))
+  const hours = Math.floor((distance / (1000 * 60 * 60)) % 24)
+  const minutes = Math.floor((distance / (1000 * 60)) % 60)
+  const seconds = Math.floor((distance / 1000) % 60)
+
+  countdown.value = [{ value: days, label: 'days' }, { value: hours, label: 'hours' }, { value: minutes, label: 'minutes' }, { value: seconds, label: 'seconds' }]
+}
+
+onMounted(() => {
+  updateCountdown()
+  timer = setInterval(updateCountdown, 1000)
+})
+
+onUnmounted(() => {
+  clearInterval(timer)
+})
+</script>
+
+<template>
+  <div class="flex flex-col gap-2 md:gap-4 items-center">
+    <div class="flex flex-col md:flex-row">
+      <p v-for="{ value, label } in countdown" :key="label" class="m-1 md:m-3 p-4 min-w-20 md:min-w-30 lg:min-w-40 bg-black/40 rounded-lg flex flex-col gap-1 items-center">
+        <span class="text-5xl md:text-6xl lg:text-8xl">{{ value }}</span>
+        <span class="text-sm md:text-lg lg:text-xl">{{ $t(`calendar.countdown.${label}`) }}</span>
+      </p>
+    </div>
+    <p v-if="countdown.length > 0" class="text-xl md:text-2xl lg:text-3xl text-center">
+      {{ $t('calendar.countdown.title') }}
+    </p>
+    <p v-else class="text-xl md:text-2xl lg:text-3xl text-center">
+      {{ $t('calendar.countdown.finished') }}
+    </p>
+  </div>
+</template>
+
+<style scoped>
+</style>

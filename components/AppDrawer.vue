@@ -1,12 +1,16 @@
 <script setup lang="ts">
 import { ref } from 'vue'
+import { calendarYears } from '~/utils/calendar.utils'
+import { appRoutes } from '~/utils/routes.utils'
+
+const { CALENDARS } = appRoutes
 
 const visible = ref(false)
 </script>
 
 <template>
   <template>
-    <div class="card flex">
+    <div class="card flex absolute">
       <Drawer v-model:visible="visible">
         <template #container="{ closeCallback }">
           <div class="flex flex-col h-full">
@@ -60,17 +64,13 @@ const visible = ref(false)
                         <i class="pi pi-chevron-down ml-auto" />
                       </a>
                       <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
-                        <li>
-                          <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
+                        <li
+                          v-for="year in calendarYears" :key="year"
+                        >
+                          <router-link v-ripple :to="`/${CALENDARS}/${year}`" class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple" @click="closeCallback">
                             <i class="pi pi-calendar mr-2" />
-                            <span class="font-medium">2025</span>
-                          </a>
-                        </li>
-                        <li>
-                          <a v-ripple class="flex items-center cursor-pointer p-4 rounded text-surface-0 hover:bg-surface-900 dark:text-surface-0 dark:hover:bg-surface-800 duration-150 transition-colors p-ripple">
-                            <i class="pi pi-calendar mr-2" />
-                            <span class="font-medium">2024</span>
-                          </a>
+                            <span class="font-medium">{{ year }}</span>
+                          </router-link>
                         </li>
                       </ul>
                     </li>
@@ -107,7 +107,7 @@ const visible = ref(false)
           </div>
         </template>
       </Drawer>
-      <Button v-if="!visible" icon="pi pi-bars" variant="outlined" class="m-2" @click="visible = true" />
+      <Button :class="[{ invisible: visible }]" icon="pi pi-bars" variant="outlined" class="top-3 start-2" @click="visible = true" />
     </div>
   </template>
 </template>

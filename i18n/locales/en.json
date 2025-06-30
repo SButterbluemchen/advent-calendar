@@ -1,3 +1,14 @@
 {
-  "welcome": "Welcome"
+  "welcome": "Welcome",
+  "calendar": {
+    "countdown": {
+      "days": "Days",
+      "finished": "The Advent Calendar is now active!",
+      "hours": "Hours",
+      "minutes": "Minutes",
+      "seconds": "Seconds",
+      "title": "left until activation of the Advent Calendar",
+      "pageTitle": "Advent Countdown",
+    }
+  }
 }
