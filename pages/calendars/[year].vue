@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import CandyCaneLoader from '~/components/CandyCaneLoader.vue'
+import { useRoute } from 'vue-router'
+import { doesCalendarExist } from '~/utils/calendar.utils'
 
 definePageMeta({
   layout: 'default',
@@ -7,33 +8,31 @@ definePageMeta({
 })
 
 const route = useRoute()
-const yearFromUrl = computed<number>(() => Number(route.params.year))
+const doesCalendarFromUrlExist = computed(() => {
+  const year = Number(route.params.year)
+  return doesCalendarExist(year)
+})
 
-const now = ref<Date>()
-const eventDate = new Date(new Date().getFullYear(), 11, 1)
-const isOldCalendar = computed(() => yearFromUrl.value < Number(now.value?.getFullYear()))
+const currentMonth = ref<number>(new Date().getMonth() + 1)
+const isCurrentYear = computed(() => route.params.year === new Date().getFullYear().toString())
 
-const loading = ref(true)
-const showCalendar = ref(isOldCalendar)
-
-const isCalendar = computed(() => now.value && now.value >= eventDate)
-
-onMounted(() => {
-  now.value = new Date()
-  loading.value = false
+const showCountdown = computed(() => {
+  return isCurrentYear.value && currentMonth.value !== 12
 })
 </script>
 
 <template>
-  <article class="flex justify-center items-center h-screen w-full">
-    <CandyCaneLoader
-      v-if="loading"
-    />
-    <div v-else-if="isCalendar || showCalendar">
-      CalendarView
-    </div>
-    <div v-else>
-      <CalendarCountdown @countdown-is-finished="showCalendar = true" />
-    </div>
+  <article class="flex justify-center items-center h-full w-full">
+    <p v-if="!doesCalendarFromUrlExist" data-testid="error">
+      Error
+    </p>
+    <article v-else>
+      <div v-if="showCountdown" data-testid="countdown">
+        <CalendarCountdown @reached="currentMonth = 12" />
+      </div>
+      <div v-else data-testid="calendar">
+        CalendarView
+      </div>
+    </article>
   </article>
 </template>

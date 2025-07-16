@@ -63,7 +63,7 @@ const visible = ref(false)
                         <span class="font-medium">{{ $t('calendars') }}</span>
                         <i class="pi pi-chevron-down ml-auto" />
                       </a>
-                      <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out">
+                      <ul class="list-none py-0 pl-4 pr-0 m-0 hidden overflow-y-hidden transition-all duration-[400ms] ease-in-out" data-testid="drawer-calendars-list">
                         <li
                           v-for="year in calendarYears" :key="year"
                         >
@@ -107,7 +107,7 @@ const visible = ref(false)
           </div>
         </template>
       </Drawer>
-      <Button :class="[{ invisible: visible }]" icon="pi pi-bars" variant="outlined" class="top-3 start-2" @click="visible = true" />
+      <Button data-testid="open-drawer-button" :class="[{ invisible: visible }]" icon="pi pi-bars" variant="outlined" class="top-3 start-2" @click="visible = true" />
     </div>
   </template>
 </template>

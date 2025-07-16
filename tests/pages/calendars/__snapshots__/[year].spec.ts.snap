@@ -1,0 +1,19 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`[year] > is in the future > should render countdown properly 1`] = `
+"<article class="flex justify-center items-center h-full w-full">
+  <article>
+    <div data-testid="countdown">
+      <calendar-countdown-stub></calendar-countdown-stub>
+    </div>
+  </article>
+</article>"
+`;
+
+exports[`[year] > is in the past > should render calendar properly 1`] = `
+"<article class="flex justify-center items-center h-full w-full">
+  <article>
+    <div data-testid="calendar"> CalendarView </div>
+  </article>
+</article>"
+`;

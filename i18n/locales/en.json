@@ -1,5 +1,4 @@
 {
-  "welcome": "Welcome",
   "adventCalendar": "Advent Calendar",
   "calendar": {
     "countdown": {
@@ -11,6 +10,9 @@
       "title": "Your Calendar is available in ...",
       "pageTitle": "Advent Countdown"
     }
+  },
+  "home": {
+    "pageTitle": "Home"
   },
   "loading": "Loading..."
 }

@@ -1,5 +1,4 @@
 {
-  "welcome": "Bonjour",
   "adventCalendar": "Calendrier de l'Avent",
   "calendar": {
     "countdown": {
@@ -11,6 +10,9 @@
       "title": "Ton calendrier est disponible dans ...",
       "pageTitle": "Countdown de l'Avent"
     }
+  },
+  "home": {
+    "pageTitle": "Accueil"
   },
   "loading": "Chargement en cours..."
 }

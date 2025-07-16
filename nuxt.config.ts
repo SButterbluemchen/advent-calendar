@@ -5,7 +5,7 @@ import { getCustomizedPreset } from './app.preset'
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
-  modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@primevue/nuxt-module'],
+  modules: ['@nuxt/eslint', '@nuxtjs/i18n', '@primevue/nuxt-module', '@nuxt/test-utils/module'],
   i18n: {
     defaultLocale: 'en',
     locales: [

@@ -5,7 +5,7 @@ import { onMounted, onUnmounted, ref } from 'vue'
 import { calendarYears } from '~/utils/calendar.utils'
 
 const emit = defineEmits<{
-  (event: 'countdownIsFinished'): void
+  (event: 'reached'): void
 }>()
 
 const targetDateCurrentYear = computed(() => new Date(new Date().getFullYear(), 11, 1))
@@ -19,13 +19,13 @@ const countdown = ref<labelValue[]>([])
 
 let timer: number | Timeout<any>
 
-function updateCountdown() {
+function updateCountdown(): void {
   const now = new Date().getTime()
   if (targetDate.value) {
     const distance = targetDate.value.getTime() - now
 
     if (distance <= 0) {
-      emit('countdownIsFinished')
+      emit('reached')
       countdown.value = []
       clearInterval(timer)
       return
@@ -54,11 +54,11 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 md:gap-4 md:-mt-20 items-center">
-    <p v-if="countdown.length > 0" class="text-xl md:text-2xl lg:text-3xl text-center">
+  <div class="flex flex-col gap-2 md:gap-4 items-center">
+    <p v-if="countdown.length > 0" class="text-xl md:text-2xl lg:text-3xl text-center" data-testid="countdown-title">
       {{ $t('calendar.countdown.title') }}
     </p>
-    <p v-else class="text-xl md:text-2xl lg:text-3xl text-center">
+    <p v-else class="text-xl md:text-2xl lg:text-3xl text-center" data-testid="countdown-finished">
       {{ $t('calendar.countdown.finished') }}
     </p>
     <div class="flex flex-col md:flex-row">

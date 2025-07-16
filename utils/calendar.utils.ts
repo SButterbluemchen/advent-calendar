@@ -12,5 +12,9 @@ export const calendarVariables: CalendarVariables = {
   },
 }
 
-export const calendarYears = computed(() =>
+export const calendarYears = computed<number[]>(() =>
   Object.keys(calendarVariables).map(Number).sort((a, b) => b - a))
+
+export function doesCalendarExist(year: number): boolean {
+  return calendarYears.value.includes(year)
+}

@@ -8,7 +8,8 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "lint": "eslint '**/*.{ts,vue}'"
+    "lint": "eslint '**/*.{ts,vue}'",
+    "test": "vitest"
   },
   "dependencies": {
     "@antfu/eslint-config": "^4.16.1",
@@ -29,6 +30,11 @@
     "vue-router": "^4.5.1"
   },
   "devDependencies": {
-    "@primevue/nuxt-module": "^4.3.5"
+    "@nuxt/test-utils": "^3.19.1",
+    "@primevue/nuxt-module": "^4.3.5",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^17.6.3",
+    "playwright-core": "^1.53.1",
+    "vitest": "^3.2.4"
   }
 }
