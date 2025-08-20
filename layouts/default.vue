@@ -4,14 +4,11 @@ import { getCustomizedPreset } from '~/app.preset'
 import { calendarVariables } from '~/utils/calendar.utils'
 
 const route = useRoute()
+const currentYear = new Date().getFullYear()
 const yearFromUrl = computed(() => Number(route.params.year))
 
-// Named slots are not supported in the default layout
-const title = computed(() => route.meta.title || '')
-useHead({ title: title.value })
-
 const backgroundImage = computed(() => {
-  const url = calendarVariables[yearFromUrl.value]?.backgroundUrl || ''
+  const url = calendarVariables[yearFromUrl.value || currentYear]?.backgroundUrl || ''
   return url ? `url(${url})` : ''
 })
 
@@ -21,19 +18,16 @@ const style = computed(() => ({
   backgroundPosition: 'center',
 }))
 
-watch(() => yearFromUrl.value, () => {
-  usePreset(getCustomizedPreset(yearFromUrl.value))
+watch(() => route, () => {
+  usePreset(getCustomizedPreset(yearFromUrl.value || currentYear))
 }, { immediate: true })
 </script>
 
 <template>
   <section class="app-container h-screen relative" :style="style">
     <AppDrawer />
-    <article class="flex flex-col text-white items-center h-screen w-full p-10 md:p-20 text-center">
-      <h2 class="text-white text-3xl md:text-4xl lg:text-6xl">
-        {{ $t(title) }}
-      </h2>
+    <main class="flex flex-col text-white items-center h-screen w-full p-10 md:p-20 text-center">
       <slot />
-    </article>
+    </main>
   </section>
 </template>

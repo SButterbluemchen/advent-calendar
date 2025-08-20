@@ -1,14 +1,11 @@
 <script setup lang="ts">
-definePageMeta({
-  layout: 'default',
-  title: 'home.pageTitle',
-})
-
-const route = useRoute()
-const title = computed(() => route.meta.title || '')
-useHead({ title: title.value })
+import PageLayout from '~/components/PageLayout.vue'
 </script>
 
 <template>
-  <h1>{{ $t(title) }}</h1>
+  <PageLayout>
+    <template #title>
+      <h2>{{ $t('home.pageTitle') }}</h2>
+    </template>
+  </PageLayout>
 </template>

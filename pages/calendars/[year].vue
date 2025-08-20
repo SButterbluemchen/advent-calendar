@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
+import PageLayout from '~/components/PageLayout.vue'
 import { doesCalendarExist } from '~/utils/calendar.utils'
-
-definePageMeta({
-  layout: 'default',
-  title: 'adventCalendar',
-})
 
 const route = useRoute()
 const doesCalendarFromUrlExist = computed(() => {
@@ -14,7 +10,8 @@ const doesCalendarFromUrlExist = computed(() => {
 })
 
 const currentMonth = ref<number>(new Date().getMonth() + 1)
-const isCurrentYear = computed(() => route.params.year === new Date().getFullYear().toString())
+const currentYear = ref<number>(new Date().getFullYear())
+const isCurrentYear = computed(() => route.params.year === currentYear.value.toString())
 
 const showCountdown = computed(() => {
   return isCurrentYear.value && currentMonth.value !== 12
@@ -22,17 +19,22 @@ const showCountdown = computed(() => {
 </script>
 
 <template>
-  <article class="flex justify-center items-center h-full w-full">
-    <p v-if="!doesCalendarFromUrlExist" data-testid="error">
-      Error
-    </p>
-    <article v-else>
-      <div v-if="showCountdown" data-testid="countdown">
-        <CalendarCountdown @reached="currentMonth = 12" />
-      </div>
-      <div v-else data-testid="calendar">
-        CalendarView
-      </div>
+  <PageLayout>
+    <template #title>
+      {{ `${$t('adventCalendar')} ${route.params.year}` }}
+    </template>
+    <article class="flex justify-center items-center h-full w-full">
+      <p v-if="!doesCalendarFromUrlExist" data-testid="error">
+        Error
+      </p>
+      <article v-else>
+        <div v-if="showCountdown" data-testid="countdown">
+          <CalendarCountdown @reached="currentMonth = 12" />
+        </div>
+        <div v-else data-testid="calendar">
+          CalendarView
+        </div>
+      </article>
     </article>
-  </article>
+  </PageLayout>
 </template>

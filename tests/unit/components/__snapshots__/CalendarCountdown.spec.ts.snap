@@ -1,0 +1,20 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`calendarCountdown > with countdown > should render properly 1`] = `
+"<div class="flex flex-col gap-2 md:gap-4 items-center">
+  <p class="text-xl md:text-2xl lg:text-3xl text-center" data-testid="countdown-title">translated calendar.countdown.title</p>
+  <div class="flex flex-col md:flex-row">
+    <p class="m-1 md:m-3 p-4 min-w-20 md:min-w-30 lg:min-w-40 bg-black/40 rounded-lg flex flex-col gap-1 items-center"><span class="text-5xl md:text-6xl lg:text-8xl">0</span><span class="text-sm md:text-lg lg:text-xl">translated calendar.countdown.days</span></p>
+    <p class="m-1 md:m-3 p-4 min-w-20 md:min-w-30 lg:min-w-40 bg-black/40 rounded-lg flex flex-col gap-1 items-center"><span class="text-5xl md:text-6xl lg:text-8xl">23</span><span class="text-sm md:text-lg lg:text-xl">translated calendar.countdown.hours</span></p>
+    <p class="m-1 md:m-3 p-4 min-w-20 md:min-w-30 lg:min-w-40 bg-black/40 rounded-lg flex flex-col gap-1 items-center"><span class="text-5xl md:text-6xl lg:text-8xl">0</span><span class="text-sm md:text-lg lg:text-xl">translated calendar.countdown.minutes</span></p>
+    <p class="m-1 md:m-3 p-4 min-w-20 md:min-w-30 lg:min-w-40 bg-black/40 rounded-lg flex flex-col gap-1 items-center"><span class="text-5xl md:text-6xl lg:text-8xl">0</span><span class="text-sm md:text-lg lg:text-xl">translated calendar.countdown.seconds</span></p>
+  </div>
+</div>"
+`;
+
+exports[`calendarCountdown > without countdown > should render properly 1`] = `
+"<div class="flex flex-col gap-2 md:gap-4 items-center">
+  <p class="text-xl md:text-2xl lg:text-3xl text-center" data-testid="countdown-finished">translated calendar.countdown.finished</p>
+  <div class="flex flex-col md:flex-row"></div>
+</div>"
+`;
