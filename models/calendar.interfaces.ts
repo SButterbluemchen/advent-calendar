@@ -4,3 +4,13 @@ export interface CalendarVariables {
     primaryColor: string
   }
 }
+
+export interface Day {
+  day: number
+  picture?: string
+  message?: string
+  embed?: {
+    url: string
+    fallback: string
+  }
+}

@@ -4,7 +4,7 @@
 
 <template>
   <section>
-    <header class="text-white text-3xl md:text-4xl lg:text-6xl mb-8">
+    <header class="h1">
       <slot name="title" />
     </header>
     <slot />

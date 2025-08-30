@@ -1,7 +1,7 @@
 import type { VueWrapper } from '@vue/test-utils'
 import { shallowMount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
-import CalendarCountdown from '~/components/CalendarCountdown.vue'
+import CalendarCountdown from '~/components/calendar/CalendarCountdown.vue'
 
 describe('calendarCountdown', () => {
   let wrapper: VueWrapper

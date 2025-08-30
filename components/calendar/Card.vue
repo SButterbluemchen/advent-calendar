@@ -1,0 +1,28 @@
+<script setup lang="ts">
+import type { Day } from '~/models/calendar.interfaces'
+import { currentMonth, currentYear } from '~/utils/dates.utils'
+import { appRoutes } from '~/utils/routes.utils'
+
+const props = defineProps<{ card: Day }>()
+const { card } = toRefs(props)
+const route = useRoute()
+
+const isSameYear = computed(() => route.params.year === currentYear.value.toString())
+
+const isDisabled = computed(() => isSameYear.value && Date.now() < new Date(currentYear.value, currentMonth.value - 1, card.value.day + 1).getTime())
+
+function goToPage() {
+  if (!isDisabled.value) {
+    navigateTo({
+      path: `/${appRoutes.CALENDARS}/${currentYear.value}/${appRoutes.DAYS}/${card.value.day}`,
+    })
+  }
+}
+</script>
+
+<template>
+  <p :data-testid="`calendar-card-${card.day}`" class="flex items-center justify-center font-bold border-1 rounded-lg bg-black/20 hover:scale-[1.03] duration-[0.3s] ease-in-out cursor-pointer w-[4rem] h-[4rem] text-xl sm:w-[6rem] sm:h-[6rem] sm:text-2xl md:border-3 lg:text-4xl md:w-[7rem] md:h-[7rem]" :class="{ 'opacity-50 bg-black/20 hover:cursor-default hover:scale-none': isDisabled }" @click="goToPage()">
+    {{ isDisabled }}
+    {{ card.day }}
+  </p>
+</template>

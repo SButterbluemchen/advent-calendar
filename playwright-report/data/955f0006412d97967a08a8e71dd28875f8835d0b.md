@@ -1,0 +1,43 @@
+# Page snapshot
+
+```yaml
+- button ""
+- main:
+  - text: Advent Calendar 2024
+  - article:
+    - article:
+      - article:
+        - paragraph: false 1
+        - paragraph: false 2
+        - paragraph: false 3
+        - paragraph: false 4
+        - paragraph: false 5
+        - paragraph: false 6
+        - paragraph: false 7
+        - paragraph: false 8
+        - paragraph: false 9
+        - paragraph: true 10
+        - paragraph: true 11
+        - paragraph: true 12
+        - paragraph: true 13
+        - paragraph: true 14
+        - paragraph: true 15
+        - paragraph: true 16
+        - paragraph: true 17
+        - paragraph: true 18
+        - paragraph: true 19
+        - paragraph: true 20
+        - paragraph: true 21
+        - paragraph: true 22
+        - paragraph: true 23
+        - paragraph: true 24
+- img
+- button "Go to parent" [disabled]
+- button "Open in editor"
+- button "Close"
+- button "Toggle Nuxt DevTools":
+  - img
+- text: 0 ms
+- button "Toggle Component Inspector":
+  - img
+```

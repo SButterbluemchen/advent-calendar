@@ -2,7 +2,7 @@ import type { VueWrapper } from '@vue/test-utils'
 import { mount } from '@vue/test-utils'
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest'
 import { useRoute } from 'vue-router'
-import YearComponent from '~/pages/calendars/[year].vue'
+import IndexComponent from '~/pages/calendars/[year]/index.vue'
 
 vi.mock('vue-router')
 
@@ -19,7 +19,7 @@ describe('[year]', () => {
   let mockRoute: any
 
   const mountYearComponentComponent = () =>
-    mount(YearComponent, {
+    mount(IndexComponent, {
     })
 
   describe('is in the past', () => {
