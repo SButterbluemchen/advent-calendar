@@ -17,6 +17,7 @@
   "dependencies": {
     "@antfu/eslint-config": "^4.16.1",
     "@nuxt/eslint": "^1.4.1",
+    "@nuxt/image": "^2.0.0",
     "@nuxtjs/i18n": "^9.5.6",
     "@primeuix/themes": "^1.1.2",
     "@primevue/forms": "^4.3.5",
