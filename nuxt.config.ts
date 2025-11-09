@@ -42,6 +42,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       nasUrl: env.NUXT_PUBLIC_NAS_URL,
+      user: env.NUXT_PUBLIC_USER,
     },
   },
 })
