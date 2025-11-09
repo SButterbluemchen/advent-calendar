@@ -17,14 +17,24 @@ const dayUrl = computed(() => {
 </script>
 
 <template>
-  <h3>
-    {{ $t('calendar.day', { day }) }}
-  </h3>
-  <div>
-    <DayPicture v-if="dayConfig.picture" :url="dayUrl" />
-    <DayFrame v-if="dayConfig.frameUrl" :url="dayConfig.frameUrl" />
-  </div>
-  <p>{{ dayConfig.message }}</p>
+  <article class="flex flex-col gap-4">
+    <div class="relative">
+      <h3 class="text-4xl text-shadow-xs">
+        {{ $t('calendar.day', { day }) }}
+      </h3>
+      <div class="absolute top-4 left-1 flex gap-2 items-center">
+        <i class="pi pi-arrow-left" />
+        <span>{{ $t('back') }}</span>
+      </div>
+    </div>
+    <div>
+      <DayPicture v-if="dayConfig.picture" :url="dayUrl" />
+      <DayFrame v-if="dayConfig.frameUrl" :url="dayConfig.frameUrl" />
+    </div>
+    <p class="text-2xl text-shadow-xs">
+      {{ dayConfig.message }}
+    </p>
+  </article>
 </template>
 
 <style scoped>
