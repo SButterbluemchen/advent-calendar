@@ -1,6 +1,7 @@
 {
   "adventCalendar": "Calendrier de l'Avent",
   "calendar": {
+    "day": "Jour {day}",
     "countdown": {
       "days": "Jours",
       "finished": "Ton calendrier de l'Avent est prêt !",

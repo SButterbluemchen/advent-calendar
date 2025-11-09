@@ -18,3 +18,26 @@ export const calendarYears = computed<number[]>(() =>
 export function doesCalendarExist(year: number): boolean {
   return calendarYears.value.includes(year)
 }
+
+function shuffleArray(array: number[]): number[] {
+  let currentIndex = array.length
+  let randomIndex
+
+  while (currentIndex !== 0) {
+    randomIndex = Math.floor(Math.random() * currentIndex)
+    currentIndex--;
+
+    // Échange rapide des deux éléments
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex],
+      array[currentIndex],
+    ]
+  }
+  return array
+}
+
+export const shuffledDays = computed<number[]>(() => {
+  const orderedDays = Array.from({ length: 24 }, (_, i) => i + 1)
+
+  return shuffleArray(orderedDays)
+})

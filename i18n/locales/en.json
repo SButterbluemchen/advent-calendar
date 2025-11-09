@@ -1,6 +1,7 @@
 {
   "adventCalendar": "Advent Calendar",
   "calendar": {
+    "day": "Day {day}",
     "countdown": {
       "days": "Days",
       "finished": "The Advent Calendar is now active!",

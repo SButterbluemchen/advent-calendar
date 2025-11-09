@@ -1,6 +1,7 @@
 {
   "adventCalendar": "Adventskalender",
   "calendar": {
+    "day": "Tag {day}",
     "countdown": {
       "days": "Tage",
       "finished": "Dein Adventskalender steht bereit!",
