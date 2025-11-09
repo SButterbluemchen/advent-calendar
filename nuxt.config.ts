@@ -37,9 +37,11 @@ export default defineNuxtConfig({
     ],
   },
   image: {
-    domains: [env.NUXT_NAS_URL!],
+    domains: [env.NUXT_PUBLIC_NAS_URL!],
   },
   runtimeConfig: {
-    nasUrl: env.NUXT_NAS_URL,
+    public: {
+      nasUrl: env.NUXT_PUBLIC_NAS_URL,
+    },
   },
 })

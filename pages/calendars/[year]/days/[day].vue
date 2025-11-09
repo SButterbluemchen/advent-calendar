@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { nasUrl } = useRuntimeConfig()
+const { public: { nasUrl } } = useRuntimeConfig()
 
 const myUrl = computed(() => {
   return `${nasUrl}/louise/2025/bg.png`
