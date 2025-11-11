@@ -4,7 +4,7 @@ const { url } = defineProps<{ url: string }>()
 
 <template>
   <iframe
-    class="w-full h-full justify-center border-0"
+    class="w-full h-full"
     allowFullScreen="true"
     :src="url"
     title="Jigsaw Puzzle"

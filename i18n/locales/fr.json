@@ -1,5 +1,5 @@
 {
-  "adventCalendar": "Calendrier de l'Avent",
+  "adventCalendar": "Calendrier de l'Avent {year}",
   "calendar": {
     "day": "Jour {day}",
     "countdown": {
