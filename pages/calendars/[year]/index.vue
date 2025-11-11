@@ -5,22 +5,28 @@ import PageLayout from '~/components/PageLayout.vue'
 import { doesCalendarExist } from '~/utils/calendar.utils'
 import { currentMonth, currentYear } from '~/utils/dates.utils'
 
+const props = defineProps<{ year: number }>()
+const { year: yearFromProps } = props
+
 const route = useRoute()
+const calculatedCurrentMonth = ref<number>(currentMonth.value)
+
+const yearToDisplay = yearFromProps ?? Number(route.params.year)
+
 const doesCalendarFromUrlExist = computed(() => {
-  const year = Number(route.params.year)
-  return doesCalendarExist(year)
+  return doesCalendarExist(yearToDisplay)
 })
 
-const isCurrentYear = computed(() => route.params.year === currentYear.value.toString())
+const isCurrentYear = computed(() => yearToDisplay === currentYear.value)
 
 const showCountdown = computed(() => {
-  return isCurrentYear.value && currentMonth.value !== 12
+  return isCurrentYear.value && calculatedCurrentMonth.value !== 12
 })
 </script>
 
 <template>
   <PageLayout>
-    <template #title>
+    <template v-if="!yearFromProps" #title>
       {{ `${$t('adventCalendar')} ${route.params.year}` }}
     </template>
     <article class="flex justify-center max-h-full max-w-full overflow-auto">
@@ -29,7 +35,7 @@ const showCountdown = computed(() => {
       </p>
       <article v-else>
         <div v-if="showCountdown" data-testid="countdown">
-          <CalendarCountdown @reached="currentMonth = 12" />
+          <CalendarCountdown @reached="calculatedCurrentMonth = 12" />
         </div>
         <div v-else data-testid="calendar">
           <Calendar />

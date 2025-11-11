@@ -1,7 +1,15 @@
-.h1 {
-  @apply text-white text-2xl px-6 mb-6 sm:text-3xl md:text-4xl lg:text-6xl sm:px-0 sm:mb-10
+@font-face {
+  font-family: "TitleFont";
+  src: url("@/assets/fonts/Cookie-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-.h4 {
-  @apply text-white text-lg px-6 mb-4 sm:text-xl md:text-2xl lg:text-3xl sm:px-0 sm:mb-6
+.h1 {
+  @apply text-white text-4xl px-6 mb-6 sm:text-5xl md:text-6xl lg:text-8xl sm:px-0 sm:mb-6;
+  font-family: "TitleFont", "Georgia", sans-serif;
+}
+
+body {
+  font-family: Verdana, sans-serif;
 }
