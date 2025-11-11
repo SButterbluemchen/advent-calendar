@@ -10,6 +10,18 @@ export const calendarVariables: CalendarVariables = {
     backgroundUrl: '/2024_background.jpg',
     primaryColor: 'sky',
   },
+  2023: {
+    backgroundUrl: '/2024_background.jpg',
+    primaryColor: 'sky',
+  },
+  2022: {
+    backgroundUrl: '/2024_background.jpg',
+    primaryColor: 'sky',
+  },
+  2021: {
+    backgroundUrl: '/2024_background.jpg',
+    primaryColor: 'sky',
+  },
 }
 
 export const calendarYears = computed<number[]>(() =>
