@@ -24,7 +24,7 @@ watch(() => route, () => {
 </script>
 
 <template>
-  <section class="app-container h-screen relative" :style="style">
+  <section class="h-screen bg-cover bg-center bg-fixed" :style="style">
     <AppDrawer />
     <main class="flex flex-col text-white items-center h-screen w-full p-6 md:p-10 text-center">
       <slot />
