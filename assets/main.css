@@ -6,8 +6,7 @@
  *   main.scss 2:1  root stylesheet */
 
 body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
+  font-family: "Verdana", sans-serif;
   white-space: pre;
   display: block;
   padding: 1em;

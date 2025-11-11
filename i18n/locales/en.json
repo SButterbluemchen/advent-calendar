@@ -13,7 +13,7 @@
     }
   },
   "home": {
-    "pageTitle": "Hi"
+    "pageTitle": "Hello {name}"
   },
   "loading": "Loading..."
 }

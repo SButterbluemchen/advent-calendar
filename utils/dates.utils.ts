@@ -1,2 +1,2 @@
-export const currentMonth = ref<number>(new Date().getMonth() + 1)
-export const currentYear = ref<number>(new Date().getFullYear())
+export const currentMonth = computed<number>(() => new Date().getMonth() + 1)
+export const currentYear = computed<number>(() => new Date().getFullYear())
