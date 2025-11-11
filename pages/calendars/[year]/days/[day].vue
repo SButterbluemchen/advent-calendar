@@ -18,15 +18,9 @@ const dayUrl = computed(() => {
 
 <template>
   <article class="h-screen overflow-hidden grid grid-rows-[auto_1fr_auto] min-w-3/4">
-    <div class="relative">
-      <h3 class="text-4xl text-shadow-xs">
-        {{ $t('calendar.day', { day }) }}
-      </h3>
-      <div class="absolute top-4 left-1 flex gap-2 items-center cursor-pointer" @click="$router.back()">
-        <i class="pi pi-arrow-left" />
-        <span>{{ $t('back') }}</span>
-      </div>
-    </div>
+    <h3 class="text-4xl text-shadow-xs">
+      {{ $t('calendar.day', { day }) }}
+    </h3>
     <div class="min-h-0 flex justify-center items-center p-4">
       <DayPicture v-if="dayConfig.picture" :url="dayUrl" />
       <DayFrame v-if="dayConfig.frameUrl" :url="dayConfig.frameUrl" />
