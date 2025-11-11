@@ -47,7 +47,7 @@ const visible = ref(false)
           <div class="mt-auto">
             <hr class="mb-4 mx-4 border-t border-0 border-surface-0 dark:border-surface-700">
             <p class="m-4 flex items-center p-4 gap-2 rounded text-surface-0 dark:text-surface-0 ">
-              <Avatar :image="avatarUrl" shape="circle" />
+              <NuxtImg width="40" height="40" class="rounded-full" :src="avatarUrl" alt="User Avatar" />
               <span class="font-bold capitalize">{{ user }}</span>
             </p>
           </div>
