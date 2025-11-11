@@ -61,10 +61,10 @@ onUnmounted(() => {
     <p v-else class="text-xl md:text-2xl lg:text-3xl text-center" data-testid="countdown-finished">
       {{ $t('calendar.countdown.finished') }}
     </p>
-    <div class="flex flex-col md:flex-row">
+    <div class="grid grid-cols-2 md:grid-cols-4">
       <p v-for="{ value, label } in countdown" :key="label" class="m-1 md:m-3 p-4 min-w-20 md:min-w-30 lg:min-w-40 bg-black/40 rounded-lg flex flex-col gap-1 items-center">
-        <span class="text-5xl md:text-6xl lg:text-8xl">{{ value }}</span>
-        <span class="text-sm md:text-lg lg:text-xl">{{ $t(`calendar.countdown.${label}`) }}</span>
+        <span class="text-8xl">{{ value }}</span>
+        <span class="text-xl">{{ $t(`calendar.countdown.${label}`) }}</span>
       </p>
     </div>
   </div>

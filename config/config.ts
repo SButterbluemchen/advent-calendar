@@ -267,42 +267,58 @@ export const CONFIG: Record<string, Calendar> = {
           picture: 'Day4.jpg',
           message: 'On aime faire des bêtises.',
         },
-        5: {},
+        5: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9pLmViYXlpbWcuY29tL2ltYWdlcy9nL0xXUUFBT1N3OXlkZEhteU0vcy1sMTIwMC5qcGc~&nop=15',
+        },
         6: {
           picture: 'Day6.jpg',
           message: 'Automne 2024.',
         },
-        7: {},
+        7: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93YWxscGFwZXJzLmNvbS9pbWFnZXMvaGQvd29vZHktYW5kLWJ1enotbGlnaHR5ZWFyLWRpc25leS00ay11bHRyYS13aWRlLTlxbHp1bXh5b3RkbXllem8uanBn&nop=15',
+        },
         8: {
           picture: 'Day8.jpg',
           message: 'Tata et parrain au ski.',
         },
-        9: {},
+        9: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9ydWttaW5pbTIuZmxpeGNhcnQuY29tL2ltYWdlLzg1MC8xMDAwL2t6enc1dTgwL3Bvc3Rlci9wL28vcC9tZWRpdW0tc25vdy13aGl0ZS1hbmQtdGhlLXNldmVuLWR3YXJmcy13YWxscGFwZXItb24tZmluZS1hcnQtb3JpZ2luYWwtaW1hZ2J2bnl0dG1menZuOS5qcGVnP3E9OTAmY3JvcD1mYWxzZQ~~&nop=15',
+        },
         10: {
           picture: 'Day10.jpg',
           message: 'Une petite chasse aux oeufs.',
         },
-        11: {},
+        11: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9kYXRhLmZvdS1kZS1wdXp6bGUuY29tL25hdGhhbi4xNS9sZXMtYXZlbnR1cmVzLWRlLWxhLXBhdHBhdHJvdWlsbGUtMTAwLXBpZWNlcy0tcHV6emxlLjk1NTU0LTEuZnMuanBn&nop=15',
+        },
         12: {
           picture: 'Day12.jpg',
           message: 'Aie, ça fait mal.',
         },
-        13: {},
+        13: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly90aG9tYXNraW5rYWRlLmNvbS9jZG4vc2hvcC9jb2xsZWN0aW9ucy9jaW5kYW5fYi0xX2NmNDc5OTFkLWU0OGYtNGIzMi1hY2I3LTExMjA2ZWM0OGE4OC5qcGc_dj0xNjg5NjE5OTQ3JndpZHRoPTgwMA~~&nop=15',
+        },
         14: {
           picture: 'Day14.jpg',
           message: 'Papa est fort en vélo.',
         },
-        15: {},
+        15: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9pbWcuZ29vZGZvbi5jb20vd2FsbHBhcGVyL2JpZy85LzI2L3RveS1zdG9yeS0yLXNoZXJpZmYtd29vZHktamVzc2llLWJ1enotbGlnaHR5ZWFyLndlYnA~&nop=15',
+        },
         16: {
           picture: 'Day16.jpg',
           message: 'Encore une belle journée au parc !!!',
         },
-        17: {},
+        17: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9pbWcuZnJlZXBpay5jb20vdmVjdGV1cnMtbGlicmUvbnVpdC1oaXZlci1lbm5laWdlZS1wZXJlLW5vZWwtY2hpZW5zLW1pZ25vbnNfMTMwOC04NzM2My5qcGc_dz0xMzgwJnQ9c3Q9MTcwMDUwNzc3N35leHA9MTcwMDUwODM3N35obWFjPTI0YTU5OTRiZDgyNzg3ZWY0MDZmZjAwYWNkMDM0N2FjZjJjODQxYjNjZjc3ZTgxM2U4YzJiZjBmYjNlYzM1MTk~&nop=12',
+        },
         18: {
           picture: 'Day18.jpg',
           message: 'Qui a gagné?',
         },
-        19: {},
+        19: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly9pbWctMzEuY2NtMi5uZXQvZVBoT1hweTdNbjJvc2FqS0laX3ZjMW5SWVdjPS8xMjQweC9zbWFydC83Mzg2YTUzMDcxZTM0NTQzODE2YTQxMDIyMzc1MzIxZi9jY21jbXMtaHVnby8xMDU1ODI4MS5qcGc~&nop=24',
+        },
         20: {
           picture: 'Day20.jpg',
           message: 'Année 2023',
@@ -315,8 +331,12 @@ export const CONFIG: Record<string, Calendar> = {
           picture: 'Day22.jpg',
           message: 'Aujourd\'hui, c\'est l\'anniversaire de mamie.',
         },
-        23: {},
-        24: {},
+        23: {
+          frameUrl: 'https://www.youtube.com/embed/LXpXN3hTJ3c?si=ffSlfEuZSXsZgOCl',
+        },
+        24: {
+          frameUrl: 'https://www.youtube.com/embed/6Tfco_qHkrs?si=NtVIw3KHKYo5ubyV',
+        },
       },
     },
     2025: {
