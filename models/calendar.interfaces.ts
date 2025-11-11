@@ -1,10 +1,6 @@
 export interface Day {
   picture?: string
   message?: string
-  embed?: {
-    url: string
-    fallback: string
-  }
   frameUrl?: string
 }
 
