@@ -2,7 +2,6 @@
 import DayFrame from '~/components/day/DayFrame.vue'
 import DayPicture from '~/components/day/DayPicture.vue'
 import { CONFIG } from '~/config/config'
-import PageLayout from '~/components/PageLayout.vue';
 
 const { public: { nasUrl, user } } = useRuntimeConfig()
 const route = useRoute()
@@ -18,21 +17,28 @@ const dayUrl = computed(() => {
 </script>
 
 <template>
-  <PageLayout>
-    <template #title>
+  <div class="h-dvh overflow-hidden grid grid-rows-[auto_1fr]">
+    <h1 class="h1 text-center">
       {{ $t('calendar.day', { day }) }}
-    </template>
-    <article class="h-screen overflow-hidden grid grid-rows-[auto_1fr_auto] min-w-3/4">
-      <div class="min-h-0 flex justify-center items-center p-4">
-        <DayPicture v-if="dayConfig.picture" :url="dayUrl" />
-        <DayFrame v-if="dayConfig.frameUrl" :url="dayConfig.frameUrl" />
+    </h1>
+
+    <article class="min-h-0 flex flex-col p-4">
+      <div class="flex-1 min-h-0 relative">
+        <DayPicture
+            v-if="dayConfig.picture"
+            :url="dayUrl"
+            class="absolute inset-0 w-full h-full object-contain"
+        />
+        <DayFrame
+            v-if="dayConfig.frameUrl"
+            :url="dayConfig.frameUrl"
+            class="absolute inset-0 w-full h-full"
+        />
       </div>
-      <p class="text-2xl text-shadow-xs flex-shrink-0">
+
+      <p class="text-center text-2xl text-shadow-xs flex-shrink-0">
         {{ dayConfig.message }}
       </p>
     </article>
-  </PageLayout>
+  </div>
 </template>
-
-<style scoped>
-</style>
