@@ -26,8 +26,8 @@ const showCountdown = computed(() => {
 
 <template>
   <PageLayout>
-    <template v-if="!yearFromProps" #title>
-      {{ `${$t('adventCalendar')} ${route.params.year}` }}
+    <template #title>
+      {{ $t('adventCalendar', { year: yearToDisplay}) }}
     </template>
     <article class="flex justify-center max-h-full max-w-full overflow-auto">
       <p v-if="!doesCalendarFromUrlExist" data-testid="error">
