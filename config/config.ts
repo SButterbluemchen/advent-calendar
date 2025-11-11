@@ -3,7 +3,6 @@ import type { Calendar } from '~/models/calendar.interfaces'
 export const CONFIG: Record<string, Calendar> = {
   louise: {
     2021: {
-      backgroundUrl: '',
       primaryColor: 'red',
       days: {
         1: {
@@ -81,7 +80,6 @@ export const CONFIG: Record<string, Calendar> = {
       },
     },
     2022: {
-      backgroundUrl: '/2024_background.jpg',
       primaryColor: 'red',
       days: {
         1: {
@@ -161,7 +159,6 @@ export const CONFIG: Record<string, Calendar> = {
       },
     },
     2023: {
-      backgroundUrl: '/2024_background.jpg',
       primaryColor: 'red',
       days: {
         1: {
@@ -252,7 +249,6 @@ export const CONFIG: Record<string, Calendar> = {
       },
     },
     2024: {
-      backgroundUrl: '/2024_background.jpg',
       primaryColor: 'red',
       days: {
         1: { message: 'Cette année, Gaspard est devenu un grand garçon.', picture: 'Day1.jpg' },
@@ -340,7 +336,6 @@ export const CONFIG: Record<string, Calendar> = {
       },
     },
     2025: {
-      backgroundUrl: '/2025_background.jpg',
       primaryColor: 'sky',
       days: {
         1: { message: 'Welcome to the 2025 Calendar!', picture: 'day1.jpg' },
@@ -350,8 +345,299 @@ export const CONFIG: Record<string, Calendar> = {
     },
   },
   christine: {
+    2021: {
+      primaryColor: 'red',
+      days: {
+        1: {
+          picture: 'Day1.jpg',
+          message: 'Ob es wohl eine weiße Weihnacht wird?',
+        },
+        2: {
+          picture: 'Day2.jpg',
+          message: 'Zeit für Weihnachtsmarkt!',
+        },
+        3: {
+          picture: 'Day3.jpg',
+          message: 'Letzte Erinnerung an 6 Weihnachten in der Wohnung!',
+        },
+        4: {
+          picture: 'Day4.jpg',
+          message: 'Dieses Jahr ist so viel passiert ... jetzt kann es zu Ende gehen!',
+        },
+        5: {
+          picture: 'Day5.jpg',
+          message: 'Vor allem wurde so viel gearbeitet!',
+        },
+        6: {
+          picture: 'Day6.jpg',
+          message: 'Heute ist erst mal Sonntag!',
+        },
+        7: {
+          picture: 'Day7.jpg',
+          message: 'Noch bisschen Diät halten, damit am 24. mehr rein geht :D',
+        },
+        8: {
+          frameUrl: 'https://crosswordlabs.com/embed/weihnachtskreuzwortratsel-37',
+        },
+        9: {
+          frameUrl: 'https://www.youtube.com/embed/5sibjEMqvQQ',
+        },
+        10: {
+          picture: 'Day10.jpg',
+          message: 'Liebe Grüße',
+        },
+        11: {
+          frameUrl: 'https://www.youtube.com/embed/6Tfco_qHkrs',
+        },
+        12: {
+          picture: 'Day12.jpg',
+          message: 'Prost zum Wochenende!',
+        },
+        13: {
+          picture: 'Day13.jpg',
+          message: 'Endspurt!',
+        },
+        14: {
+          picture: 'Day14.jpg',
+          message: 'Gemütlich zu Zweit',
+        },
+        15: {
+          picture: 'Day15.jpg',
+          message: 'Einfach die besten Eltern der Welt!',
+        },
+        16: {
+          picture: 'Day16.jpg',
+          message: 'Und so hübsch :)',
+        },
+        17: {
+          picture: 'Day17.jpg',
+          message: 'Raclette dieses Jahr zu Weihnachten ... ?',
+        },
+        18: {
+          picture: 'Day18.jpg',
+          message: '... Oder doch lieber Fondue ?',
+        },
+        19: {
+          frameUrl: 'https://www.youtube.com/embed/-MDcCm-F6Vs',
+        },
+        20: {
+          frameUrl: 'https://www.youtube.com/embed/k4IeH5B-XoQ',
+        },
+        21: {
+          picture: 'Day21.jpg',
+          message: 'Ob es wohl Schnecken zu Essen gibt?',
+        },
+        22: {
+          picture: 'Day22.jpg',
+          message: 'Und mal langsam anfangen zu kochen ...',
+        },
+        23: {
+          picture: 'Day23.jpg',
+          message: 'Nur noch 1 Tag!',
+        },
+        24: {
+          picture: 'Day24.jpg',
+          message: 'Frohe Weihnachten!',
+        },
+      },
+    },
+    2022: {
+      primaryColor: 'red',
+      days: {
+        1: {
+          picture: 'Day1.jpg',
+          message: '1 - Die Zahl Eins, wie 1 Jahr im Haus.',
+        },
+        2: {
+          picture: 'Day2.jpg',
+          message: 'Prost zum Wochenende!',
+        },
+        3: {
+          picture: 'Day3.jpg',
+          message: 'Ab sofort Fasten für Weihnachten!',
+        },
+        4: {
+          frameUrl: 'https://www.youtube.com/embed/5sibjEMqvQQ',
+        },
+        5: {
+          frameUrl: 'https://www.youtube.com/embed/5sibjEMqvQQ',
+        },
+        6: {
+          picture: 'Day6.jpg',
+          message: 'Morgen Abend gibt es wieder Raclette und Apericubes!',
+        },
+        7: {
+          picture: 'Day7.jpg',
+          message: 'Wir sind auf dem Weg!',
+        },
+        8: {
+          picture: 'Day8.jpg',
+          message: 'Nachdem wir nun alle Corona hatten, haben wir uns heute Wellness verdient!',
+        },
+        9: {
+          picture: 'Day9.jpg',
+          message: 'Heute gibt es endlich Glühwein auf dem Weihnachtsmarkt!',
+        },
+        10: {
+          picture: 'Day10.jpg',
+          message: 'Heute ist es endlich Zeit für den Weihnachtsbaum!',
+        },
+        11: {
+          frameUrl: 'https://www.youtube.com/embed/6Tfco_qHkrs',
+        },
+        12: {
+          picture: 'Day12.jpg',
+          message: 'Kuss bis wir uns im Januar wieder sehen (nicht mal 4 Wochen).',
+        },
+        13: {
+          picture: 'Day13.jpg',
+          message: 'Ob es dieses Jahr noch schneit?',
+        },
+        14: {
+          frameUrl: 'https://www.youtube.com/embed/k4IeH5B-XoQ',
+        },
+        15: {
+          picture: 'Day15.jpg',
+          message: 'Es ist Zeit, Julias Geburtstagsgeschenk zu verpacken.',
+        },
+        16: {
+          picture: 'Day16.jpg',
+          message: 'Prost zum Wochenende!',
+        },
+        17: {
+          picture: 'Day17.jpg',
+          message: 'Was gibt es eigentlich diese Weihnacht zu essen?',
+        },
+        18: {
+          picture: 'Day18.jpg',
+          message: 'Und wichtiger, was gibt es zu trinken?',
+        },
+        19: {
+          frameUrl: 'https://www.youtube.com/embed/-MDcCm-F6Vs',
+        },
+        20: {
+          frameUrl: 'https://www.youtube.com/embed/k4IeH5B-XoQ',
+        },
+        21: {
+          picture: 'Day21.jpg',
+          message: 'Ob es wohl "Moules" zu essen gibt?',
+        },
+        22: {
+          picture: 'Day22.jpg',
+          message: 'Übermorgen ist endlich Ostern - ehh - Weihnachten!',
+        },
+        23: {
+          picture: 'Day23.jpg',
+          message: 'Prost zum Wochenende!',
+        },
+        24: {
+          picture: 'Day24.jpg',
+          message: 'Frohe Weihnachten!',
+        },
+      },
+    },
+    2023: {
+      primaryColor: 'red',
+      days: {
+        1: {
+          picture: 'Galette.JPG',
+          message: 'Am 6. Januar gibt es wieder Galette des Rois. Hier geht es zum Rezept.',
+        },
+        2: {
+          picture: 'Anniversaire-Papa.JPG',
+          message: 'Happy Birthday, Papa! Bald ist es wieder soweit. Ob dann auch wieder gesungen wird? 🎶',
+        },
+        3: {
+          picture: 'Ski2.JPG',
+          message: 'Liegt denn schon Schnee?',
+        },
+        4: {
+          picture: 'Sicile.JPG',
+          message: 'Buon Natale! - Weihnachten auf italienisch 🇮🇹',
+        },
+        5: {
+          picture: 'Kuss.JPG',
+          message: 'Wie wäre es mit einem Kuss? Bald ist ja auch wieder Valentinstag.',
+        },
+        6: {
+          picture: 'London.jpg',
+          message: 'Wie wäre es mit einem Kurztrip nächstes Jahr? London zum Beispiel?',
+        },
+        7: {
+          picture: 'Braderie.JPG',
+          message: 'Uhh Käse 😍🧀',
+        },
+        8: {
+          picture: 'Pilsen.JPG',
+          message: 'Heute ist Wochenende. Zeit für ein Pils, oder?',
+        },
+        9: {
+          picture: 'Provencal.JPG',
+          message: 'Man könnte ja auch mal wieder gut Essen gehen...',
+        },
+        10: {
+          picture: 'Cheminee.JPG',
+          message: 'Brrr... heute bleiben wir daheim im Warmen.',
+        },
+        11: {
+          picture: 'Anniv-Mama.JPG',
+          message: 'Dieses Jahr haben wir echt viel hier gefeiert 🥂',
+        },
+        12: {
+          picture: 'Prag-Pont.JPG',
+          message: 'Schön war es Prag 😀',
+        },
+        13: {
+          picture: 'Peindre-Mama.JPG',
+          message: 'Heute wird nochmal gearbeitet!',
+        },
+        14: {
+          picture: 'Trinken.JPG',
+          message: 'Haben wir dieses Jahr eigentlich mehr gearbeitet oder getrunken? 😅',
+        },
+        15: {
+          picture: 'Munich3.JPG',
+          message: 'Prost zum Wochenende! 🍻',
+        },
+        16: {
+          picture: 'Weinbar.JPG',
+          message: 'Eine neue Weinbar haben wir dieses Jahr auch entdeckt. Da müssen wir bald wieder hin 🍷',
+        },
+        17: {
+          picture: 'Grillen.JPG',
+          message: 'Was gibt es eigentlich diese Weihnacht zu essen?',
+        },
+        18: {
+          picture: 'Lille-Noel1.JPG',
+          message: 'So langsam kommt Weihnachtsstimmung auf 🎄',
+        },
+        19: {
+          picture: 'Dick.JPG',
+          message: 'Ob wir am 24. wieder so aussehen? 😂',
+        },
+        20: {
+          picture: 'Pacs.JPG',
+          message: 'Bald sind wir wieder zusammen? ❤️',
+        },
+        21: {
+          picture: 'Cabane.JPG',
+          message: 'Dieses Jahr haben wir viel geschafft 😮‍💨 - und die Hütte ist auch fertig!',
+        },
+        22: {
+          picture: 'Paques.JPG',
+          message: 'Übermorgen ist endlich Ostern - ehh - Weihnachten!',
+        },
+        23: {
+          picture: 'Biermesse.JPG',
+          message: 'Prost zum Wochenende!',
+        },
+        24: {
+          picture: 'Lille-Noel2.JPG',
+          message: 'Frohe Weihnachten!',
+        },
+      },
+    },
     2024: {
-      backgroundUrl: '/2024_background.jpg',
       primaryColor: 'red',
       days: {
         1: {
@@ -451,7 +737,6 @@ export const CONFIG: Record<string, Calendar> = {
       },
     },
     2025: {
-      backgroundUrl: '/2025_background.jpg',
       primaryColor: 'sky',
       days: {
         1: { message: 'Welcome to the 2025 Calendar!', picture: 'day1.jpg' },
