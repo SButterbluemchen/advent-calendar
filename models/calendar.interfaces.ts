@@ -6,7 +6,6 @@ export interface Day {
 
 export interface Calendar {
   [year: string]: {
-    backgroundUrl: string
     primaryColor: string
     days: {
       [day: string]: Day
