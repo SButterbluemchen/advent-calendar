@@ -3,6 +3,10 @@ import DayFrame from '~/components/day/DayFrame.vue'
 import DayPicture from '~/components/day/DayPicture.vue'
 import { CONFIG } from '~/config/config'
 
+definePageMeta({
+  layout: 'day-layout',
+})
+
 const { public: { nasUrl, user } } = useRuntimeConfig()
 const route = useRoute()
 const { year, day } = route.params

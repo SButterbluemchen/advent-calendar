@@ -2,6 +2,10 @@
 import { ref } from 'vue'
 import { CONFIG } from '~/config/config'
 
+const props = defineProps<{
+  showBackButton?: boolean
+}>()
+
 const { public: { nasUrl, user } } = useRuntimeConfig()
 
 const avatarUrl = computed(() => {
@@ -56,7 +60,7 @@ const visible = ref(false)
     </Drawer>
     <div class="flex flex-col">
       <Button data-testid="open-drawer-button" :class="[{ invisible: visible }]" icon="pi pi-bars" variant="outlined" class="top-3 start-2 mb-2" @click="visible = true" />
-      <Button data-testid="open-drawer-button" :class="[{ invisible: visible }]" icon="pi pi-arrow-left" variant="outlined" class="top-3 start-2" @click="$router.back()" />
+      <Button v-if="props.showBackButton" data-testid="open-drawer-button" icon="pi pi-arrow-left" variant="outlined" class="top-3 start-2" @click="$router.back()" />
     </div>
   </div>
 </template>
