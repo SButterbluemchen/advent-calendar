@@ -8,6 +8,10 @@ const currentYear = new Date().getFullYear()
 const yearFromUrl = computed(() => Number(route.params.year))
 
 const backgroundImage = computed(() => {
+  if (!yearFromUrl.value) {
+    return 'url(/default_background.jpg)'
+  }
+
   return `url(${nasUrl}/${user}/${yearFromUrl.value}/background.jpg)`
 })
 
