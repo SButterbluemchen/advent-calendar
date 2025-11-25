@@ -11,11 +11,9 @@ const isSameYear = computed(() => route.params.year === currentYear.value.toStri
 const isDisabled = computed(() => isSameYear.value && Date.now() < new Date(currentYear.value, currentMonth.value - 1, day + 1).getTime())
 
 function goToPage() {
-  if (!isDisabled.value) {
-    navigateTo({
-      path: `/${appRoutes.CALENDARS}/${route.params.year}/${appRoutes.DAYS}/${day}`,
-    })
-  }
+  navigateTo({
+    path: `/${appRoutes.CALENDARS}/${route.params.year}/${appRoutes.DAYS}/${day}`,
+  })
 }
 </script>
 

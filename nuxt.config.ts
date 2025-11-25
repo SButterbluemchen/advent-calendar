@@ -6,6 +6,9 @@ import { getCustomizedPreset } from './app.preset'
 export default defineNuxtConfig({
   compatibilityDate: '2025-05-15',
   devtools: { enabled: true },
+  router: {
+    middleware: ['router-middleware'],
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxtjs/i18n',
