@@ -15,5 +15,5 @@
   "home": {
     "pageTitle": "Hello {name}"
   },
-  "loading": "Loading..."
+  "loading": "Loading ..."
 }

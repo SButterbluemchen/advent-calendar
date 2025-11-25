@@ -34,7 +34,7 @@ const showCountdown = computed(() => {
         Error
       </p>
       <article v-else>
-        <div v-if="showCountdown" data-testid="countdown">
+        <div v-if="showCountdown" data-testid="countdown" class="mt-10 md:mt-20">
           <CalendarCountdown @reached="calculatedCurrentMonth = 12" />
         </div>
         <div v-else data-testid="calendar">
