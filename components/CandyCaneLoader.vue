@@ -12,7 +12,7 @@ onMounted(() => {
     else {
       width.value = width.value + 2
     }
-  }, 100)
+  }, 50)
 })
 
 onUnmounted(() => {

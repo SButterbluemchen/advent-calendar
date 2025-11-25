@@ -16,6 +16,7 @@ const targetDateFromCalendar = computed(() =>
 )
 const targetDate = ref(targetDateFromCalendar.value ? targetDateFromCalendar : targetDateCurrentYear.value)
 const countdown = ref<labelValue[]>([])
+const loading = ref<boolean>(true)
 
 let timer: number | Timeout<any>
 
@@ -36,10 +37,13 @@ function updateCountdown(): void {
     const minutes = Math.floor((distance / (1000 * 60)) % 60)
     const seconds = Math.floor((distance / 1000) % 60)
 
-    countdown.value = [{ value: days, label: 'days' }, { value: hours, label: 'hours' }, {
-      value: minutes,
-      label: 'minutes',
-    }, { value: seconds, label: 'seconds' }]
+    countdown.value = [
+      { value: days, label: 'days' },
+      { value: hours, label: 'hours' },
+      { value: minutes, label: 'minutes' },
+      { value: seconds, label: 'seconds' },
+    ]
+    loading.value = false
   }
 }
 
@@ -54,7 +58,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <div class="flex flex-col gap-2 md:gap-4 items-center">
+  <div v-if="loading" class="mt-50">
+    <CandyCaneLoader />
+  </div>
+  <div v-else class="flex flex-col gap-2 md:gap-4 items-center">
     <p v-if="countdown.length > 0" class="text-xl md:text-2xl lg:text-3xl text-center" data-testid="countdown-title">
       {{ $t('calendar.countdown.title') }}
     </p>
