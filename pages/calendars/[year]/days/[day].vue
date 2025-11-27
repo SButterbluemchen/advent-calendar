@@ -5,6 +5,7 @@ import { CONFIG } from '~/config/config'
 
 definePageMeta({
   layout: 'day-layout',
+  middleware: ['router-middleware'],
 })
 
 const { public: { nasUrl, user } } = useRuntimeConfig()
