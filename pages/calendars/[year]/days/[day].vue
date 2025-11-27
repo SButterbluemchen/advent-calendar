@@ -18,6 +18,12 @@ const dayUrl = computed(() => {
 
   return `${nasUrl}/${user}/${year}/${dayImage}`
 })
+
+const dayUploadedVideo = computed(() => {
+  const dayVideo = dayConfig.value.uploadedVideo!
+
+  return `${nasUrl}/${user}/${year}/${dayVideo}`
+})
 </script>
 
 <template>
@@ -28,6 +34,7 @@ const dayUrl = computed(() => {
     <div class="min-h-0 flex justify-center items-center p-1 md:p-4 bg-white">
       <DayPicture v-if="dayConfig.picture" :url="dayUrl" />
       <DayFrame v-if="dayConfig.frameUrl" :url="dayConfig.frameUrl" />
+      <DayVideo v-if="dayConfig.uploadedVideo" :url="dayUploadedVideo" />
     </div>
     <p class="text-2xl text-shadow-md/30 flex-shrink-0">
       {{ dayConfig.message }}

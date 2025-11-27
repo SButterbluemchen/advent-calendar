@@ -10,7 +10,9 @@
       "seconds": "Secondes",
       "title": "Ton calendrier est disponible dans ...",
       "pageTitle": "Countdown de l'Avent"
-    }
+    },
+    "iframeFallback": "Ton navigateur ne supporte pas les iframes.",
+    "videoFallback": "Ton navigateur ne supporte pas la balise vidéo."
   },
   "home": {
     "pageTitle": "Bonjour"

@@ -5,11 +5,12 @@ const { t } = useI18n()
 </script>
 
 <template>
-  <iframe
+  <video
     class="w-full h-full justify-center border-0"
-    allowFullScreen="true"
+    controls
     :src="url"
-    title="Jigsaw Puzzle"
-  >{{ t('calendar.iframeFallback') }}
-  </iframe>
+    title="Video"
+  >
+    {{ t('calendar.videoFallback') }}
+  </video>
 </template>
