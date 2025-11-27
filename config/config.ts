@@ -338,13 +338,32 @@ export const CONFIG: Record<string, Calendar> = {
     2025: {
       primaryColor: 'sky',
       days: {
-        1: { message: 'Bienvenue sur le calendrier 2025!', picture: 'day1.jpg' },
-        2: {},
-        3: {},
-        4: {},
-        5: {},
+        1: {
+          message: 'Allez! On commence l\'aventure 2025 avec un puzzle!',
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNS9EYXkxLndlYnA~&nop=25'
+        },
+        2: {
+          picture: 'Day2.jpg',
+          message: 'Devinette, quel age a Parrain sur cette photo ? 😃',
+        },
+        3: {
+          picture: 'Day3.jpg',
+          message: 'Les chasseurs de dragons sont prêts ! 🐲',
+        },
+        4: {
+          picture: 'Day4.jpg',
+          message: 'Marathon l\'année prochaine ! 🏃‍♀️',
+        },
+        5: {
+          picture: 'Day5.jpg',
+          message: 'Caca mauvais ou caca qualité 💩',
+
+        },
         6: {},
-        7: {},
+        7: {
+          picture: 'Day7.jpg',
+          message: 'Tata et parrain au Canada 🇨🇦',
+        },
         8: {},
         9: {},
         10: {},
