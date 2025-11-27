@@ -10,7 +10,9 @@
       "seconds": "Seconds",
       "title": "Your Calendar is available in ...",
       "pageTitle": "Advent Countdown"
-    }
+    },
+    "iframeFallback": "Your browser does not support iframes.",
+    "videoFallback": "Your browser does not support the video tag."
   },
   "home": {
     "pageTitle": "Hello {name}"

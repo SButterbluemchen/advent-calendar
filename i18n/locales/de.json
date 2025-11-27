@@ -10,7 +10,9 @@
       "seconds": "Sekunden",
       "title": "Dein Kalender ist verfügbar in ...",
       "pageTitle": "Advent Countdown"
-    }
+    },
+    "iframeFallback": "Dein Browser unterstützt keine iframes.",
+    "videoFallback": "Dein Browser unterstützt dieses Video nicht."
   },
   "home": {
     "pageTitle": "Hallo"
