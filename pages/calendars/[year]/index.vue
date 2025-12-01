@@ -6,6 +6,7 @@ import { doesCalendarExist } from '~/utils/calendar.utils'
 import { currentMonth, currentYear } from '~/utils/dates.utils'
 
 const props = defineProps<{ year: number }>()
+
 const { year: yearFromProps } = props
 
 const route = useRoute()
@@ -38,7 +39,7 @@ const showCountdown = computed(() => {
           <CalendarCountdown @reached="calculatedCurrentMonth = 12" />
         </div>
         <div v-else data-testid="calendar">
-          <Calendar />
+          <Calendar year="yearToDisplay"/>
         </div>
       </article>
     </article>
