@@ -23,7 +23,7 @@ watch(() => route, () => {
 </script>
 
 <template>
-  <section class="h-screen bg-cover bg-center bg-fixed" :style="style">
+  <section class="min-h-screen bg-cover bg-center bg-fixed" :style="style">
     <AppDrawer :show-back-button="true" />
     <main class="flex flex-col text-white items-center h-screen w-full p-6 md:p-10 text-center">
       <slot />
