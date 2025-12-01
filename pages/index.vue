@@ -1,17 +1,7 @@
 <script setup lang="ts">
-import PageLayout from '~/components/PageLayout.vue'
-import YearPage from '~/pages/calendars/[year]/index.vue'
+import { DateTime } from 'luxon'
 
-const { public: { user } } = useRuntimeConfig()
+const currentYear = DateTime.now().year
 
-const capitalizedName = user ? `${user.charAt(0).toUpperCase() + user.slice(1)}` : ''
+navigateTo(`/calendars/${currentYear}`)
 </script>
-
-<template>
-  <PageLayout>
-    <template #title>
-      <h2>{{ $t('home.pageTitle', { name: capitalizedName }) }}</h2>
-    </template>
-    <YearPage :year="2025" />
-  </PageLayout>
-</template>

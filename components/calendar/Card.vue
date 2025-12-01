@@ -1,14 +1,14 @@
 <script setup lang="ts">
-import { currentMonth, currentYear } from '~/utils/dates.utils'
+import { DateTime } from 'luxon'
 import { appRoutes } from '~/utils/routes.utils'
 
 const props = defineProps<{ day: number }>()
 const { day } = props
 const route = useRoute()
 
-const isSameYear = computed(() => route.params.year === currentYear.value.toString())
+const year = route.params.year
 
-const isDisabled = computed(() => isSameYear.value && Date.now() < new Date(currentYear.value, currentMonth.value - 1, day + 1).getTime())
+const isDisabled = computed(() => DateTime.local(Number(year), 12, day) > DateTime.local())
 
 function goToPage() {
   if (!isDisabled.value) {
