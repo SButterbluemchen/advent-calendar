@@ -3,7 +3,7 @@ import { range, shuffle } from 'lodash-es'
 import { markRaw } from 'vue'
 import Card from '~/components/calendar/Card.vue'
 
-const shuffledArray = markRaw(shuffle(range(1, 24)))
+const shuffledArray = markRaw(shuffle(range(1, 25)))
 const days = ref(shuffledArray)
 </script>
 
