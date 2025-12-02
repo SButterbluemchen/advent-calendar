@@ -340,7 +340,7 @@ export const CONFIG: Record<string, Calendar> = {
       days: {
         1: {
           message: 'Allez! On commence l\'aventure 2025 avec un puzzle!',
-          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNS9EYXkxLndlYnA~&nop=25'
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNS9EYXkxLndlYnA~&nop=25',
         },
         2: {
           picture: 'Day2.jpg',
@@ -348,7 +348,7 @@ export const CONFIG: Record<string, Calendar> = {
         },
         3: {
           picture: 'Day3.jpg',
-          message: 'Les chasseurs de dragons sont prêts ! 🐲',
+          message: 'C\'est qui le plus fort? Le dragon, le varan ou Lilith 🐲',
         },
         4: {
           picture: 'Day4.jpg',
@@ -357,7 +357,6 @@ export const CONFIG: Record<string, Calendar> = {
         5: {
           picture: 'Day5.jpg',
           message: 'Caca mauvais ou caca qualité 💩',
-
         },
         6: {},
         7: {
