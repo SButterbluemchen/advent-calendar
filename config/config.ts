@@ -348,19 +348,19 @@ export const CONFIG: Record<string, Calendar> = {
         },
         3: {
           picture: 'Day3.jpg',
-          message: 'C\'est qui le plus fort? Le dragon, le varan ou Lilith 🐲',
+          message: 'C\'est qui le plus fort ? Le dragon, le varan ou Lilith 🐲',
         },
         4: {
           picture: 'Day4.jpg',
-          message: 'Marathon l\'année prochaine ! 🏃‍♀️',
+          message: 'Marathon l\'année prochaine! 🏃‍♀️',
         },
         5: {
           picture: 'Day5.jpg',
           message: 'Caca mauvais ou caca qualité 💩',
         },
         6: {
-          message: 'C\'est reparti pour un puzzle!',
-          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNS9QVVpaTEVfMS5qcGc~&nop=30'
+          message: 'C\'est reparti pour un puzzle !',
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNS9QVVpaTEVfMS5qcGc~&nop=30',
         },
         7: {
           picture: 'Day7.jpg',
@@ -371,7 +371,7 @@ export const CONFIG: Record<string, Calendar> = {
           message: 'Mon frère est un clown 🤡',
         },
         9: {
-          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNC9EYXk0LmpwZw~~&nop=30'
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNC9EYXk0LmpwZw~~&nop=30',
         },
         10: {
           picture: 'Day10.jpg',
@@ -379,7 +379,7 @@ export const CONFIG: Record<string, Calendar> = {
         },
         11: {
           picture: 'Day11.jpg',
-          message: 'On est des petits indiens 🪶',
+          message: 'Nous sommes de petits indiens 🪶',
         },
         12: {
           picture: 'Day12.jpg',
@@ -405,7 +405,7 @@ export const CONFIG: Record<string, Calendar> = {
         18: {},
         19: {},
         20: {
-          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyMS9EYXk2LmpwZw~~&nop=30'
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyMS9EYXk2LmpwZw~~&nop=30',
         },
         21: {
           picture: 'Day21.jpg',
