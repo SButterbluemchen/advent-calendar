@@ -358,27 +358,64 @@ export const CONFIG: Record<string, Calendar> = {
           picture: 'Day5.jpg',
           message: 'Caca mauvais ou caca qualité 💩',
         },
-        6: {},
+        6: {
+          message: 'C\'est reparti pour un puzzle!',
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNS9QVVpaTEVfMS5qcGc~&nop=30'
+        },
         7: {
           picture: 'Day7.jpg',
           message: 'Tata et parrain au Canada 🇨🇦',
         },
-        8: {},
-        9: {},
-        10: {},
-        11: {},
-        12: {},
-        13: {},
-        14: { message: 'Valentine\'s Day Special', picture: 'day14.jpg' },
-        15: {},
-        16: {},
+        8: {
+          picture: 'Day8.jpg',
+          message: 'Mon frère est un clown 🤡',
+        },
+        9: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNC9EYXk0LmpwZw~~&nop=30'
+        },
+        10: {
+          picture: 'Day10.jpg',
+          message: 'Seance photo 📸',
+        },
+        11: {
+          picture: 'Day11.jpg',
+          message: 'On est des petits indiens 🪶',
+        },
+        12: {
+          picture: 'Day12.jpg',
+          message: 'Avec tata 🙂',
+        },
+        13: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyNC9EYXk4LmpwZw~~&nop=30',
+          message: 'Qui est-ce ? 😃',
+        },
+        14: {
+          picture: 'Day14.jpg',
+          message: 'Vivement les prochaines vacances au ski 🎿',
+        },
+        15: {
+          picture: 'Day15.jpg',
+          message: 'Quel age a eu maman ici ? 😃',
+        },
+        16: {
+          picture: 'Day16.JPG',
+          message: 'Est ce qu\' on est des enfants sages ? 🧐',
+        },
         17: {},
         18: {},
         19: {},
-        20: {},
-        21: {},
+        20: {
+          frameUrl: 'https://www.jigsawexplorer.com/online-jigsaw-puzzle-player.html?url=aHR0cHM6Ly93ZWJzdGF0aW9uLmRhbWllbndhbGxlLmZyL2FkdmVudC1jYWxlbmRhci9sb3Vpc2UvMjAyMS9EYXk2LmpwZw~~&nop=30'
+        },
+        21: {
+          picture: 'Day21.jpg',
+          message: 'Glaglaglagla ❄️',
+        },
         22: {},
-        23: {},
+        23: {
+          picture: 'Day24.jpg',
+          message: 'Plus que 1 jour avant Noël 🎄',
+        },
         24: {},
       },
     },
